@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+    <img src="{{ perfil.foto.url }}" class="rounded-circle">
+    <h1>Perfil</h1>
+
+    <p>{{ perfil.usuario.username }}</p>
+    <p>{{ perfil.bio }}</p>
+
+    {% include 'usuarios/ola.html' %}
+
+{% endblock %}

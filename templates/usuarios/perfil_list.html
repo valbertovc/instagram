@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+    <h1>Perfis dos usuários</h1>
+
+    {% for perfil in perfis %}
+        <img src="{{ perfil.foto.url }}" class="rounded-circle">
+        <h3>{{ perfil.usuario.username }}</h3>
+        <p>{{ perfil.bio }}</p>
+    {% endfor %}
+
+{% endblock %}

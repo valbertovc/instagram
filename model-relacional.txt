@@ -1,0 +1,20 @@
+publicacoes
+    publicacao
+        imagens
+        legenda
+        comentarios
+        curtidas
+        publicado_em
+        publicado_por
+
+    comentario
+        texto
+        comentado_por
+        comentado_em
+
+
+usuarios
+	profile
+		usuario
+		foto
+		bio
