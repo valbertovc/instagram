@@ -1,0 +1,31 @@
+Aplicaçoes
+- usuarios
+    - Perfil
+      - bio
+      - site
+      - seguidores
+      - seguindo
+      - visibilidade
+      - foto
+- posts
+  - Post
+    - Perfil
+    - likes
+    - foto
+    - data
+  - Comentario
+    - texto
+    - likes
+    - data
+- stories
+  - Story
+    - foto
+    - data
+    - texto
+- directs
+  - Message
+    - texto
+    - emissor
+    - receptor
+    - data
+    - like
