@@ -5,6 +5,7 @@
     <title>{{ perfil }}</title>
 </head>
 <body>
+    <img src="{{ perfil.foto.url }}">
     <h1>{{ perfil.usuario.first_name }} {{ perfil.usuario.last_name }}</h1>
     <p>{{ perfil.bio }}</p>
     <p><a href="{{ perfil.site }}">Site</a></p>
