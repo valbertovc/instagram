@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ perfil }}</title>
-</head>
-<body>
+{% extends 'home.html' %}
+
+{% block titulo %}
+Perfil de {{ perfil }}
+{% endblock %}
+
+{% block conteudo %}
     <img src="{{ perfil.foto.url }}">
-    <h1>{{ perfil.usuario.first_name }} {{ perfil.usuario.last_name }}</h1>
+    <h1>{{ perfil.usuario.first_name|capfirst }} {{ perfil.usuario.last_name|capfirst }}</h1>
     <p>{{ perfil.bio }}</p>
     <p><a href="{{ perfil.site }}">Site</a></p>
-</body>
-</html>
+{% endblock %}

@@ -5,11 +5,13 @@ from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
 from django.shortcuts import render, get_object_or_404
 from usuarios import models
+from posts import models as posts_models
 
 
 @login_required
 def home(request):
-    return render(request, 'home.html')
+    posts = posts_models.Post.objects.all()
+    return render(request, '../templates/home.html', {'posts': posts})
 
 
 def perfil_detail(request, pk):
