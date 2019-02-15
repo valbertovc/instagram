@@ -6,6 +6,11 @@ from django.contrib.auth.models import User
 from django.utils.encoding import python_2_unicode_compatible
 
 
+class PerfilQuerySet(models.QuerySet):
+    def privados(self):
+        return self.filter(privado=True)
+
+
 @python_2_unicode_compatible
 class Perfil(models.Model):
     usuario = models.OneToOneField(
@@ -30,6 +35,8 @@ class Perfil(models.Model):
     criado_em = models.DateTimeField(auto_now_add=True, null=True)
     atualizado_por = models.ForeignKey(User, related_name='perfis_atualizados', null=True)
     atualizado_em = models.DateTimeField(auto_now=True, null=True)
+
+    objects = PerfilQuerySet().as_manager()
 
     class Meta(object):
         verbose_name = 'Perfil'
